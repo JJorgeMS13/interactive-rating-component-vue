@@ -11,5 +11,8 @@ module.exports = defineConfig({
         additionalData: `@import "@/styles/variables.scss";`
       }
     }
-  }
+  },
+  publicPath: process.env.NODE_ENV === 'production'
+  ? '/interactive-rating-component-vue'
+  : '/'
 })
