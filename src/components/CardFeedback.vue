@@ -10,12 +10,12 @@
             to help us improve our offering!
         </p>
         <div class="card__number">
-            <span 
+            <button 
               v-for="(item, index) in numersStar"
               :key="index"
               @click="saveNumberStar(item)"
               :class="active(index)"
-              >{{ item }}</span>
+              >{{ item }}</button>
         </div>
         <button @click="submit()">Submit</button>
     </section>
@@ -96,11 +96,12 @@ export default {
     display: flex;
     gap: 1.8rem;
     justify-content: space-around;
-    span {
+    button {
         display: flex;
         justify-content: center;
         font-size: 1.4rem;
         font-weight: 700;
+        border: none;
         align-items: center;
         border-radius: 50%;
         background-color: $darkBlue;
