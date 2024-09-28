@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Rating/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Rating from './page/RatingPage.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Rating, 
   }
 }
 </script>
 
-<style>
+<style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,700;1,700&display=swap');
+:root {
+  font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 1.5rem;
+  height: 100vh;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 100vh;
 }
 </style>
